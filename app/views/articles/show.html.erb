@@ -2,9 +2,8 @@
 
 <%= render @article %>
 
-<div>
-  <%= link_to "Edit this article", edit_article_path(@article) %> |
-  <%= link_to "Back to articles", articles_path %>
-
-  <%= button_to "Destroy this article", @article, method: :delete %>
+<div class="mx-auto text-center">
+  <%= link_to "Edit", edit_article_path(@article),:class=>"btn btn-primary m-1" %> |
+  <%= link_to "Back", articles_path,:class=>"btn btn-info m-1" %> |
+  <%= button_to "Del", @article, method: :delete, :class=>"btn btn-danger m-1 text-center" %>
 </div>

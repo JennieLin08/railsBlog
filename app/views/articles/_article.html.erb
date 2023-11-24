@@ -1,17 +1,20 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
+<div id="<%= dom_id article %>" class="text-center">
+  <div class="card mx-auto"  style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">
+      <strong>Title:</strong>
+      <%= article.title %>
+    </h5>
 
-  <p>
-    <strong>Body:</strong>
-    <%= article.body %>
-  </p>
+    <p class="card-text">
+      <strong>Body:</strong>
+      <%= article.body %>
+    </p>
 
-  <p>
-    <strong>Published:</strong>
-    <%= article.published %>
-  </p>
-
+    <p class="card-text">
+      <strong>Published:</strong>
+      <%= article.published %>
+    </p>
+    </div>
+  </div>
 </div>
