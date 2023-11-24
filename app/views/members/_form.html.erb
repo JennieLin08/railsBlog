@@ -1,0 +1,31 @@
+<%= form_with(model: member) do |f| %>
+    # <%= form_with scope: :member, url: create_member_path, local:true do |f| %>
+    <p>
+    <% if member.errors.any? %>
+    <ul>
+    <% member.errors.full_messages.each do |message| %>
+     <li> <%= message %> </li>
+     <% end %>
+    </ul>
+    </p>
+ 
+     <p>
+     <%= f.label :name %><br />
+     <%= f.text_field :name %><br />
+     </p>
+ 
+     <p>
+     <%= f.label :username %><br />
+     <%= f.text_field :username %><br />
+     </p>
+ 
+     <p>
+     <%= f.label :email %><br />
+     <%= f.text_field :email %><br />
+     </p>
+ 
+     <p>
+     <%= f.submit %>
+     </p>
+ 
+     <% end %>
